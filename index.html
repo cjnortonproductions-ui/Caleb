@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Caleb J. Norton | Music Educator</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:#000;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.header-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:25px 0;
+}
+
+.logo h1{
+    color:#f4c542;
+    font-size:52px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav{
+    margin-top:18px;
+}
+
+nav ul{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:23px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#f4c542;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:70px 8%;
+    background:linear-gradient(to right,#000,#181818,#000);
+}
+
+.hero-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    border-radius:30px;
+    border:8px solid #f4c542;
+    box-shadow:0 0 45px rgba(244,197,66,.35);
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h2{
+    font-size:75px;
+    line-height:1.15;
+    margin-bottom:25px;
+}
+
+.hero-text span{
+    color:#f4c542;
+}
+
+.hero-text h3{
+    font-size:38px;
+    color:#d8d8d8;
+    margin-bottom:35px;
+}
+
+.hero-text p{
+    font-size:23px;
+    line-height:1.9;
+    color:#cfcfcf;
+    max-width:650px;
+}
+
+.buttons{
+    margin-top:45px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:18px 42px;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#f4c542;
+    color:#000;
+}
+
+.btn-primary:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(244,197,66,.6);
+}
+
+.btn-secondary{
+    border:2px solid #f4c542;
+    color:#f4c542;
+}
+
+.btn-secondary:hover{
+    background:#f4c542;
+    color:#000;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.logo h1{
+    font-size:34px;
+}
+
+nav ul{
+    gap:18px;
+}
+
+nav ul li a{
+    font-size:18px;
+}
+
+.hero{
+    padding:40px 6%;
+}
+
+.hero-container{
+    flex-direction:column;
+}
+
+.hero-image img{
+    max-width:290px;
+}
+
+.hero-text{
+    text-align:center;
+}
+
+.hero-text h2{
+    font-size:54px;
+}
+
+.hero-text h3{
+    font-size:28px;
+}
+
+.hero-text p{
+    font-size:20px;
+}
+
+.buttons{
+    justify-content:center;
+}
+.back-to-top{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:55px;
+    height:55px;
+    background:#f7b733;
+    color:#000;
+    border-radius:50%;
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
+    transition:.3s;
+}
+
+.back-to-top:hover{
+    background:#fff;
+    transform:translateY(-5px);
+}
+}
+
+</style>
+
+</head>
+
+<body id="top">
+
+<header>
+
+<div class="header-container">
+
+<div class="logo">
+<h1>Caleb J. Norton</h1>
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="collaborations.html">Collaborations</a></li>
+
+<li><a href="aimusic.html">AI Music</a></li>
+
+<li><a href="podcasts.html">Podcasts</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-image">
+
+<img src="logo.jpeg" alt="CNorton Productions">
+
+</div>
+
+<div class="hero-text">
+
+<h2>
+Hi, I'm <span>Caleb J. Norton</span>
+</h2>
+
+<h3>
+Music Teacher • Mentor • Musician
+</h3>
+
+<p>
+Helping students unlock their musical potential through inspiring lessons, creative coaching, composition, performance, research, and innovative music technology.
+</p>
+
+<div class="buttons">
+
+<a href="about.html" class="btn btn-primary">Explore
+</a>
+
+<a href="contact.html" class="btn btn-secondary">
+Contact Me
+</a>
+
+<a href="#top" class="back-to-top">
+    ↑
+</a>
+</a>
+</body>
+</html>

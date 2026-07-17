@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Caleb J. Norton</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
+
+/*================ HEADER ================*/
+
+header{
+    background:#000;
+    padding:15px 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    text-align:center;
+    color:#f7b733;
+    font-size:36px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    list-style:none;
+    gap:22px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#f7b733;
+}
+
+/*================ HERO ================*/
+
+.contact-hero{
+    text-align:center;
+    padding:90px 8%;
+    background:linear-gradient(135deg,#000,#121212,#1a1305);
+}
+
+.contact-hero h1{
+    font-size:60px;
+    color:#f7b733;
+    margin-bottom:20px;
+}
+
+.contact-hero p{
+    max-width:750px;
+    margin:auto;
+    color:#ccc;
+    font-size:20px;
+    line-height:1.8;
+}
+/*================ CONTACT ================*/
+
+.contact{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:50px;
+    padding:100px 8%;
+    background:#050505;
+}
+
+.contact-info h2,
+.contact-form h2{
+    color:#f7b733;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.info-box{
+    background:#111;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    border:1px solid #222;
+}
+
+.info-box h3{
+    color:#f7b733;
+    margin-bottom:10px;
+}
+
+.info-box a{
+    color:white;
+    text-decoration:none;
+}
+
+.info-box a:hover{
+    color:#f7b733;
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background:#111;
+    color:white;
+    border:1px solid #333;
+    padding:15px;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact-form button{
+    background:#f7b733;
+    color:#000;
+    border:none;
+    padding:15px;
+    border-radius:30px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:white;
+}
+/*================ SOCIALS ================*/
+
+.socials{
+    background:#000;
+    padding:90px 8%;
+    text-align:center;
+}
+
+.socials h2{
+    color:#f7b733;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.socials p{
+    color:#bbb;
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.social-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.social-buttons a{
+    background:#111;
+    color:#f7b733;
+    text-decoration:none;
+    padding:15px 28px;
+    border-radius:35px;
+    border:1px solid #333;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.social-buttons a:hover{
+    background:#f7b733;
+    color:#000;
+    transform:translateY(-5px);
+}
+
+/*================ FOOTER ================*/
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:30px 20px;
+    border-top:1px solid #222;
+}
+
+footer p{
+    color:#999;
+    margin:8px 0;
+    font-size:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Caleb J. Norton</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="collaborations.html">Collaborations</a></li>
+
+<li><a href="aimusic.html">AI Music</a></li>
+
+<li><a href="podcasts.html">Podcasts</a></li>
+
+<li><a href="contact.html" class="active">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="contact-hero">
+
+<h1>Let's Connect</h1>
+
+<p>
+Whether you're interested in collaborations, speaking engagements,
+music education, AI music projects, performances, workshops,
+or creative partnerships, I'd love to hear from you.
+</p>
+
+</section>
+<!--================ CONTACT SECTION ================-->
+
+<section class="contact">
+
+<div class="contact-info">
+
+<h2>Get In Touch</h2>
+
+<p>
+I'm always open to discussing collaborations, speaking engagements,
+music education, AI music projects, workshops, and creative partnerships.
+</p>
+
+<div class="info-box">
+<h3>📍 Location</h3>
+<p>Auburn, Alabama, USA</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!--================ SOCIALS ================-->
+
+<section class="socials">
+
+<h2>Connect With Me</h2>
+
+<p>
+Follow my work, music, research, podcasts, and creative projects online.
+</p>
+
+<div class="social-buttons">
+
+<a href="https://youtube.com/@cnortonprodcutions?si=C4PSE5TCCI0vqqhN" target="_blank">▶ YouTube</a>
+
+<a href="https://www.facebook.com/profile.php?id=61585822255621&name=xhp_nt__fb__action__open_user" target="_blank">Facebook</a>
+
+<a
+</div>
+
+</section>
+
+<footer>
+
+<p>&copy; 2026 Caleb J. Norton. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+
+</html>

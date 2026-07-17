@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Collaborations | Caleb J. Norton</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    line-height:1.6;
+}
+
+/*========== HEADER ==========*/
+
+header{
+    background:#000;
+    width:100%;
+    padding:12px 5%;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.5);
+}
+
+.logo-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:12px;
+}
+
+.logo-container img{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #f7b733;
+}
+
+.logo-container h1{
+    color:#f7b733;
+    font-size:60px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:35px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#f7b733;
+}
+
+/*========== HERO ==========*/
+
+.hero{
+    height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("images/collaboration-banner.jpg") center/cover;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h2{
+    font-size:50px;
+    color:#f7b733;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    color:#ddd;
+    margin-bottom:40px;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:15px 40px;
+    background:#f7b733;
+    color:#000;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:20px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:#fff;
+}
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color:#f7b733;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.section-intro{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    color:#ccc;
+    font-size:20px;
+    line-height:1.8;
+}
+
+/*========== COLLABORATION CARDS ==========*/
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #333;
+    border-radius:18px;
+    padding:35px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#f7b733;
+    box-shadow:0 10px 25px rgba(247,183,51,.25);
+}
+
+.card h3{
+    color:#f7b733;
+    margin-bottom:18px;
+    font-size:28px;
+}
+
+.card p{
+    color:#ddd;
+    font-size:18px;
+    line-height:1.8;
+}
+/*========== CALL TO ACTION ==========*/
+
+.cta{
+    text-align:center;
+    padding:100px 8%;
+    background:#111;
+}
+
+.cta-buttons{
+    margin-top:40px;
+}
+
+.btn,
+.btn-outline{
+    display:inline-block;
+    margin:10px;
+    padding:16px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn{
+    background:#f7b733;
+    color:#000;
+}
+
+.btn:hover{
+    background:#fff;
+}
+
+.btn-outline{
+    border:2px solid #f7b733;
+    color:#f7b733;
+}
+
+.btn-outline:hover{
+    background:#f7b733;
+    color:#000;
+}
+.contact-card{
+    background:#111;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.contact-card a{
+    color:#f7b733;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.contact-card a:hover{
+    color:white;
+}
+.back-to-top{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:55px;
+    height:55px;
+    background:#f7b733;
+    color:#000;
+    border-radius:50%;
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
+    transition:.3s;
+}
+
+.back-to-top:hover{
+    background:#fff;
+    transform:translateY(-5px);
+}
+.btn{
+    background:#f7b733;
+    color:#000 !important;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    display:inline-block;
+}
+</style>
+
+</head>
+
+<body id="top">
+
+<header>
+
+<div class="logo-container">
+
+<img src="logo.jpeg" alt="Caleb J. Norton Logo">
+
+<h1>Caleb J. Norton</h1>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="collaborations.html" class="active">Collaborations</a></li>
+
+<li><a href="aimusic.html">AI Music</a></li>
+
+<li><a href="podcasts.html">Podcasts</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Let's Collaborate</h2>
+
+<p>
+Whether you're an educator, artist, researcher, institution,
+or creative organization, I welcome opportunities to collaborate
+through music education, composition, AI-assisted music,
+research, workshops, performances, and creative media.
+</p>
+
+<a href="#opportunities" class="hero-btn">
+Explore Opportunities
+</a>
+
+</div>
+
+</section>
+<!-- ================== COLLABORATION OPPORTUNITIES ================== -->
+
+<section id="opportunities">
+
+<h2 class="section-title">Collaboration Opportunities</h2>
+
+<p class="section-intro">
+I enjoy partnering with educators, schools, universities, musicians,
+arts organizations, researchers, and creative professionals to create
+meaningful musical experiences and innovative educational projects.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🎓 Music Education</h3>
+<p>
+Professional development, curriculum design, classroom demonstrations,
+teacher workshops, and student-centered learning experiences.
+</p>
+</div>
+
+<div class="card">
+<h3>🎼 Composition & Arranging</h3>
+<p>
+Original compositions, concert works, custom arrangements,
+film scoring, piano music, and commissioned pieces.
+</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Music & Technology</h3>
+<p>
+AI-assisted music creation, digital production,
+music technology, beat making,
+and creative innovation.
+</p>
+</div>
+
+<div class="card">
+<h3>🌍 Research & Scholarship</h3>
+<p>
+Research partnerships, conference presentations,
+historical music education,
+publications, and academic collaboration.
+</p>
+</div>
+
+<div class="card">
+<h3>🎙 Podcast & Media</h3>
+<p>
+Podcast interviews, YouTube collaborations,
+educational media, and digital storytelling
+through music and technology.
+</p>
+</div>
+
+<div class="card">
+<h3>🎵 Performances & Clinics</h3>
+<p>
+Guest conducting, adjudication,
+masterclasses, ensemble clinics,
+artist residencies, and performances.
+</p>
+</div>
+
+</div>
+
+</section>
+<!--==================== COLLABORATORS ====================-->
+
+<section class="collaborators">
+
+<h2 class="section-title">Collaborators & Partners</h2>
+
+<p class="section-intro">
+Throughout his career, Caleb J. Norton has collaborated with universities,
+schools, arts organizations, researchers, and creative professionals on
+music education, performance, research, and technology initiatives.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🎓 Auburn University</h3>
+<p>
+Graduate Teaching Assistant, instructor, researcher, presenter,
+and collaborator on music education initiatives.
+</p>
+</div>
+
+<div class="card">
+<h3>🌍 University of Cape Coast</h3>
+<p>
+International presentations, music education research,
+faculty collaboration, and cultural exchange in Ghana.
+</p>
+</div>
+
+<div class="card">
+<h3>🎼 Tuskegee University</h3>
+<p>
+Adjunct Instructor of Music and collaborator in music education
+and historical research.
+</p>
+</div>
+
+<div class="card">
+<h3>🎵 Tennessee State University</h3>
+<p>
+Graduate studies, teaching, research presentations,
+and Department of Bands collaboration.
+</p>
+</div>
+
+<div class="card">
+<h3>🏫 Metro Nashville Public Schools</h3>
+<p>
+Elementary general music education,
+curriculum development,
+and mentoring future music educators.
+</p>
+</div>
+
+<div class="card">
+<h3>🤖 Handshake AI</h3>
+<p>
+Collaborator on AI-assisted music creation,
+creative technology,
+and digital music innovation.
+</p>
+</div>
+
+<div class="card">
+<h3>🎧 CNortonProductions</h3>
+<p>
+Creative partnerships through podcasts,
+YouTube content,
+digital media,
+and AI music production.
+</p>
+</div>
+
+<div class="card">
+<h3>🎤 DJMr.J</h3>
+<p>
+Collaborative Afro LoFi music production
+combining AI-assisted composition
+and digital media.
+</p>
+</div>
+
+</div>
+
+</section>
+<!--==================== LET'S BUILD TOGETHER ====================-->
+
+<section class="cta">
+
+<h2 class="section-title">Let's Build Something Together</h2>
+
+<p class="section-intro">
+
+Whether you're planning a workshop, conference, performance,
+research project, AI music initiative, podcast, or educational partnership,
+I'd love to hear your ideas and explore how we can work together.
+
+</p>
+
+<div class="cta-buttons">
+
+<a href="contact.html" class="btn">Start a Collaboration</a>
+
+<div class="contact-card">
+
+<h3>Email Me</h3>
+
+<p>
+<a href="mailto:cjhnorton@gmail.com?subject=Website%20Inquiry">
+    📧 cjhnorton@gmail.com
+</a>
+
+<a href="aimusic.html" class="btn">
+    Explore AI Music →
+</a>
+</div>
+</div>
+
+</section>
+<a href="#top" class="back-to-top">
+    ↑
+</a>
+</a>
+</body>
+</html>

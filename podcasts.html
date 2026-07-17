@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Podcasts | Caleb J. Norton</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    line-height:1.6;
+}
+
+/*================ HEADER ================*/
+
+header{
+    background:#000;
+    padding:15px 5%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 12px rgba(0,0,0,.6);
+}
+
+.logo-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.logo-container img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #f7b733;
+}
+
+.logo-container h1{
+    color:#f7b733;
+    font-size:38px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#f7b733;
+}
+
+/*================ HERO ================*/
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:70px 8%;
+    background:linear-gradient(135deg,#000,#101010,#1b1405);
+    gap:60px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.tag{
+    display:inline-block;
+    border:1px solid #f7b733;
+    color:#f7b733;
+    padding:8px 20px;
+    border-radius:40px;
+    margin-bottom:25px;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+.hero h2{
+    font-size:58px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero h2 span{
+    color:#f7b733;
+}
+
+.hero p{
+    color:#ccc;
+    font-size:20px;
+    line-height:1.8;
+    max-width:650px;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    background:#f7b733;
+    color:#000;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#fff;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+    box-shadow:0 0 35px rgba(247,183,51,.3);
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:18px;
+}
+/*================ FEATURED EPISODES ================*/
+
+.episodes{
+    padding:100px 8%;
+    background:#050505;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    color:#f7b733;
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#bbb;
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+.episode-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.episode-card{
+    background:#111;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+    border:1px solid #222;
+}
+
+.episode-card:hover{
+    transform:translateY(-10px);
+    border-color:#f7b733;
+    box-shadow:0 0 30px rgba(247,183,51,.25);
+}
+
+.episode-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.episode-content{
+    padding:25px;
+}
+
+.episode-content h3{
+    color:#f7b733;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.episode-content p{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.watch-btn{
+    display:inline-block;
+    background:#f7b733;
+    color:#000;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.watch-btn:hover{
+    background:#fff;
+}
+/*================ LATEST SERIES ================*/
+
+.series{
+    padding:100px 8%;
+    background:#0a0a0a;
+}
+
+.series-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.series-box{
+    background:#111;
+    border:1px solid #222;
+    border-radius:18px;
+    padding:35px;
+    transition:.3s;
+}
+
+.series-box:hover{
+    transform:translateY(-10px);
+    border-color:#f7b733;
+    box-shadow:0 0 25px rgba(247,183,51,.25);
+}
+
+.series-box h3{
+    color:#f7b733;
+    margin-bottom:18px;
+    font-size:25px;
+}
+
+.series-box p{
+    color:#ccc;
+    line-height:1.8;
+}
+/*================ SUBSCRIBE ================*/
+
+.subscribe{
+    padding:100px 8%;
+    text-align:center;
+    background:#000;
+}
+
+.subscribe h2{
+    color:#f7b733;
+    font-size:46px;
+    margin-bottom:20px;
+}
+
+.subscribe p{
+    color:#ccc;
+    font-size:20px;
+    max-width:700px;
+    margin:0 auto 40px;
+    line-height:1.8;
+}
+
+.subscribe-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.social-btn{
+    display:inline-block;
+    background:#f7b733;
+    color:#000;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.social-btn:hover{
+    background:#fff;
+    transform:translateY(-5px);
+}
+footer{
+    background:#111;
+    color:#888;
+    text-align:center;
+    padding:25px;
+    margin:80px auto;
+    width:80%;
+    border-radius:12px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-container">
+
+<img src="logo.jpeg" alt="Logo">
+
+<h1>Caleb J. Norton</h1>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="collaborations.html">Collaborations</a></li>
+
+<li><a href="aimusic.html">AI Music</a></li>
+
+<li><a href="podcasts.html" class="active">Podcasts</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<span class="tag">PODCAST • EDUCATION • MUSIC</span>
+
+<h2>
+Conversations That <span>Inspire Creativity</span>
+</h2>
+
+<p>
+Welcome to the CNortonProductions Podcast, where music education,
+artificial intelligence, creativity, and inspiring conversations come together.
+Discover interviews, insights, and stories from educators, musicians,
+researchers, and creative professionals.
+</p>
+
+<div class="buttons">
+
+<a href="#episodes" class="btn">
+Watch Episodes
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="logo.jpeg" alt="Podcast Banner">
+
+</div>
+
+</section>
+<!--==================== FEATURED EPISODES ====================-->
+
+<section id="episodes" class="episodes">
+
+<div class="section-title">
+
+<h2>Featured Podcast Episodes</h2>
+
+<p>
+Explore conversations about music education, AI, creativity,
+technology, and the future of music.
+</p>
+
+</div>
+
+<div class="episode-grid">
+
+<div class="episode-card">
+
+<img src="Photo.jpeg" alt="Episode 1">
+
+<div class="episode-content">
+
+<h3>Podcast Episode 1 Featuring Dr.William Powel</h3>
+
+<p>
+In this conversation, Dr. Powell shares insights on his background, teaching journey, career in music, choral leadership, education, and the experiences that have shaped his work as a musician and educator.
+</p>
+
+<a href="https://youtu.be/imh_ImGkZH8?si=TV-RjX1BFHXzKmir" target="_blank" class="watch-btn">
+▶ Watch on YouTube
+</a>
+
+</div>
+
+</div>
+
+<div class="episode-card">
+
+<img src="photo.jpeg" alt="Episode 2">
+
+<div class="episode-content">
+
+<h3>Podcast Episode 2:Khari Allen Lee</h3>
+
+<p>
+Music,Education and Creative Versatility 
+</p>
+
+<a href="https://youtu.be/cQm3g65YY-w?si=Un6om_Eivbm2SuTY" target="_blank" class="watch-btn">
+▶ Watch on YouTube
+</a>
+
+</div>
+
+</div>
+
+<div class="episode-card">
+
+<img src="photo.jpg" alt="Episode 3">
+
+<div class="episode-content">
+
+<h3>Podcast Episode 3 with Rickey Oglesby</h3>
+
+<p>
+Talks about HBCU Bands,Percussion & Music Education
+</p>
+
+<a href="https://youtu.be/AV__As4kve8?si=25nkV5JylKwQS_nb" target="_blank" class="watch-btn">
+▶ Watch on YouTube
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!--==================== LATEST SERIES ====================-->
+
+<section class="series">
+
+<div class="section-title">
+
+<h2>Latest Podcast Series</h2>
+
+<p>
+Discover insightful discussions on music, education,
+artificial intelligence, creativity, and professional growth.
+</p>
+
+</div>
+
+<div class="series-container">
+
+<div class="series-box">
+
+<h3>🎵 Music Education</h3>
+
+<p>
+Teaching strategies, classroom management, curriculum development,
+and inspiring the next generation of musicians.
+</p>
+
+</div>
+
+<div class="series-box">
+
+<h3>🤖 AI & Music Technology</h3>
+
+<p>
+Exploring AI-assisted composition, digital production,
+music innovation, and the future of creative technology.
+</p>
+
+</div>
+
+<div class="series-box">
+
+<h3>🎙 Guest Conversations</h3>
+
+<p>
+Interviews with educators, performers, composers,
+researchers, and creative professionals from around the world.
+</p>
+
+</div>
+
+<div class="series-box">
+
+<h3>🌍 Culture & Creativity</h3>
+
+<p>
+Exploring world music, cultural exchange,
+musical traditions, and global perspectives in music education.
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!--==================== SUBSCRIBE ====================-->
+
+<section class="subscribe">
+
+<h2>Never Miss an Episode</h2>
+
+<p>
+Subscribe to CNortonProductions for interviews, music education,
+AI music, and creative conversations.
+</p>
+
+<div class="subscribe-buttons">
+
+<a href="https://youtube.com/@cnortonprodcutions?si=UcHcfyQXew2iM7zm" target="_blank" class="social-btn">
+▶ Subscribe on YouTube
+</a>
+
+<a href="contact.html" class="social-btn">
+📩 Contact Caleb
+</a>
+
+</div>
+
+</section>
+<footer>
+    <p>&copy; 2026 Caleb J. Norton. All Rights Reserved.</p>
+</footer>
+</body>
+
+</html>
